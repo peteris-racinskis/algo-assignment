@@ -14,10 +14,9 @@ def process_graph(data):
             forest.union(u,v)
         else:
             result.append((w,u,v,))
-    print(result)
-    print("COST : {}".format(sum(int(w) for w,u,v in result)))
-    [print(x) for x in result]
-    print(remaining)
+    count = len(result)
+    total_cost = sum(int(w) for w,_,_ in result)
+    return count, total_cost, result
 
 def get_positive(edges):
     return list(filter(lambda x: x[0] > 0, edges))
@@ -49,4 +48,7 @@ if len(args) > 1:
     filenames = args[1:]
 for f in filenames:
     ret = parse_input(f)
-    process_graph(ret)
+    k, W, res = process_graph(ret)
+    print("Number of stashes: {}".format(k))
+    print("Cost of stashes:   {}".format(W))
+    print("Edges:             {}".format(res))
