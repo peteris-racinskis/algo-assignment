@@ -1,6 +1,6 @@
 # Homework solution - complement of max spanning forest using Kruskal's algorithm
 
-Finds the complement (set of discarded edges) of the max spanning forest of the provided input data after all edges of weight less than or equal to 0 have been removed.
+Finds the complement (set of discarded edges) of the max spanning forest of the provided graph once all edges of weight less than or equal to 0 have been removed.
 
 ### Installation and usage
 
