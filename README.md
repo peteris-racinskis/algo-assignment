@@ -25,7 +25,7 @@ Since this is a homework assignment dealing with asymptotic complexity and not a
 #### How it works
 
 1. Input file is read into a string, split into blocks of non-whitespace text using regular expressions; empty substrings are removed and remaining elements are cast to integer type. O(m)
-2. Resulting Python list (dynamic array/linked list) of integers is organized into a list of tuples from the top (using n * O(1) list.pop() operations), representing graph edges. O(m)
+2. Resulting Python list (dynamic array/linked list) of integers is organized into a list of tuples from the top (using m * O(1) list.pop() operations), representing graph edges. O(m)
 3. Two lists are created - result and remaining. All edges with weight <= 0 are copied into the result list, while the others are copied into the remaining list. O(m)
 4. The "remaining" list is sorted in decreasing order by weight of each edge. O(m log m)
 5. A Disjoint Set datastructure (with custom implementation) is created to contain the vertices and may or may not be initialized (depending on what the author has finally decided on in the final commit before sharing this assignment). (somewhere in the O(1 ... n) region)
@@ -50,4 +50,4 @@ The values corresponding to integer keys in the disjoint set are represented by 
 
 The DjSet class itself exposes the following methods - find_root(), same_subset() and union() - all of which employ the find_root() method of the DjNode class and therefore share the same asymptotic complexity.
 
-Combining everything so far: each call of union() or same_subset() from the main program execution loop has an estimated amortized time complexity of O(a(n)), where a - the inverse Ackerman function. This can be in practical terms be thought of as roughly equivalent to O(1) or far less than O(log n).
+Combining everything so far: each call of union() or same_subset() from the main program execution loop has an estimated amortized time complexity of O(a(n)), where a - the inverse Ackerman function. This can be in practical terms be thought of as roughly equivalent to O(1) or far less than O(log n). Therefore the total time complexity of step 6 is O(n) ~ O(n a(n)) << O(n log n).
