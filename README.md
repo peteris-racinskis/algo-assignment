@@ -10,14 +10,12 @@ No packaging provided, but since the tool requires no external libraries, clonin
 $ https://github.com/peteris-racinskis/algo-assignment.git
 $ cd algo-assignment/
 $ ./main.py <input file> [<output file>]
-
 ```
 
 Default output file location:
 
 ```
 ./output.txt
-
 ```
 
 ## Description of the program 
