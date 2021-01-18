@@ -22,6 +22,10 @@ Default output file location:
 
 Since this is a homework assignment dealing with asymptotic complexity and not a piece of production code, no attempt toward optimizing real runtime performance has been made. Hashmap type datastructures are native to Python and have approximately O(1) time complexity for insert/lookup operations, so they've been used without regard to the (oftentimes very large) constant factor penalties when compared to linear search operations (which can be very fast on modern CPU hardware).
 
+Kruskal's algorithm for finding the max spanning forest was selected for the following reasons:
+1. It supports finding spanning forests of disconnected graphs - there is no guarantee input graph will be fully connected once non-positive edges are discarded;
+2. It seemed like the most straightforward to implement from the options available.
+
 #### How it works
 
 1. Input file is read into a string, split into blocks of non-whitespace text using regular expressions; empty substrings are removed and remaining elements are cast to integer type. O(m)
