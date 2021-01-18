@@ -19,7 +19,7 @@ def process_graph(data):
         else:
             result.append((w,u,v,))
     count = len(result)
-    total_cost = sum(int(w) for w,_,_ in result)
+    total_cost = sum(w for w,_,_ in result)
     return count, total_cost, result
 
 def get_positive(edges):
@@ -45,7 +45,7 @@ def parse_input(path):
     return list(filter(lambda x: x != "", re.split("\s{1,}", d)))
 
 def print_to_file(k,w,res,filename):
-    s = "{}\t{}\t".format(k,w)
+    s = "{}\t{}".format(k,w)
     for r in res:
         s = s + "\t{}\t{}".format(r[1],r[2])
     with open(filename, 'w') as f:
