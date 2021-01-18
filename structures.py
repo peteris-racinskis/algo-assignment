@@ -70,21 +70,3 @@ class DjSet:
         roots[1].add_size(roots[0].get_size())
         
 
-
-
-def do_work(edges):
-    p = get_positive(edges)
-    discarded = get_non_positive(edges)
-    vertices = set([x[1] for x in p])
-    vertices.add(set([x[2] for x in p]))
-    trees = DjSet(vertices)
-    for w,u,v in p:
-        if not trees.same_subset(u,v):
-            trees.union(u,v)
-        else:
-            discarded.append((w,u,v,))
-    
-        
-
-
-
