@@ -7,7 +7,7 @@ Finds the complement (set of discarded edges) of the max spanning forest of the 
 No packaging provided, but since the tool requires no external libraries, cloning this repository on any machine with Python 3.6+ should suffice:
 
 ```
-$ https://github.com/peteris-racinskis/algo-assignment.git
+$ git clone https://github.com/peteris-racinskis/algo-assignment.git
 $ cd algo-assignment/
 $ ./main.py <input file> [<output file>]
 ```
