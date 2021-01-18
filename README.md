@@ -20,7 +20,7 @@ Default output file location:
 
 ## Description of the program 
 
-Since this is a homework assignment dealing with asymptotic complexity and not a piece of production code, no attempt toward optimizing real runtime performance has been made. Hashmap type datastructures are native to Python and have approximately O(1) time complexity for insert/lookup operations, so they've been used without regard to the (potentially large) constant factor penalties when compared to linear search operations (which can be very fast on modern CPU hardware).
+Since this is a homework assignment dealing with asymptotic complexity and not a piece of production code, no attempt toward optimizing real runtime performance has been made. 
 
 Kruskal's algorithm for finding the max spanning forest was selected for the following reasons:
 1. It supports finding spanning forests of disconnected graphs - there is no guarantee input graph will be fully connected once non-positive edges are discarded;
@@ -46,7 +46,7 @@ The idea for this data structure as well as its implementation details were deri
 
 [Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
 
-The data structure in this case is implemented using a Python dictionary, which is itself a hashmap-type data structure whose underlying implementation is an array of hashes, keys and value pointers. According to language documentation, average amortized time complexity for insertion, deletion and lookup operations can be expected to be O(1). However, this is at the expense of periodic resize operations which can have wildly varying constant time delay. Furthermore, the nature of using reference data types as the values in the dictionary, along with Python's hidden memory allocation and managament system, means that it's difficult to predict what memory access time penalties might be incurred at runtime. 
+The data structure in this case is implemented using a Python dictionary, which is itself a hashmap-type data structure whose underlying implementation is an array of hashes, key and value pointers. According to language documentation, average amortized time complexity for insertion, deletion and lookup operations can be expected to be O(1). However, this is at the expense of periodic resize operations which can have wildly varying constant time delay. Furthermore, the nature of using reference data types as the values in the dictionary, along with Python's hidden memory allocation and managament system, means that it's difficult to predict what memory access time penalties might be incurred at runtime. 
 
 When optimizing for real time performance, it's quite possible that using simpler list/array types would net performance benefits, but that would require looking past the high-level abstractions provided by the language and diving into implementation details.
 
