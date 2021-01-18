@@ -31,7 +31,7 @@ Since this is a homework assignment dealing with asymptotic complexity and not a
 3. Two lists are created - result and remaining. All edges with weight <= 0 are copied into the result list, while the others are copied into the remaining list. O(m)
 4. The "remaining" list is sorted in decreasing order by weight of each edge. O(m log m)
 5. A Disjoint Set datastructure (with custom implementation) is created to contain the vertices and may or may not be initialized (depending on what the author has finally decided on in the final commit before sharing this assignment). (somewhere in the O(1 ... n) region)
-6. Iteration over all the edges in the "remaining" list, starting from the largest. Disjoint Set representing a forest of trees is used to determine if the two vertices already belong to the same tree in the forest. If not, the edge is added to the tree and the trees both vertices belong to are joined into a single tree. If yes, no action is performed on the disjoint set but the edge is appended to the "result" list. See COMPLEXITY OF DISJOINT SET OPERATIONS below for details.
+6. Iteration over all the edges in the "remaining" list, starting from the largest. Disjoint Set representing a forest of trees is used to determine if the two vertices already belong to the same tree in the forest. If not, the trees both vertices belong to are joined into a single tree. If yes, no action is performed on the disjoint set but the edge is appended to the "result" list. See COMPLEXITY OF DISJOINT SET OPERATIONS below for details.
 7. The length of the "result" list is returned as the number of stashes that need to be created. O(1)
 8. The sum of the weights of all edges in the "result" list is computed. O(m)
 9. Results are formatted and output to file. ~O(m)
