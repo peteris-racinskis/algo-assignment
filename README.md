@@ -54,4 +54,4 @@ The values corresponding to integer keys in the disjoint set are represented by 
 
 The DjSet class itself exposes the following methods - find_root(), same_subset() and union() - all of which employ the get_root() method of the DjNode class and therefore share the same asymptotic complexity.
 
-Combining everything so far: each call of union() or same_subset() from the main program execution loop has an estimated amortized time complexity of O(a(n)), where a - the inverse Ackerman function. This can be in practical terms be thought of as roughly equivalent to O(1) or far less than O(log n). Therefore the total time complexity of step 6 is O(m) ~ O(m a(n)) << O(m log n).
+Combining everything so far: each call of union() or same_subset() from the main program execution loop has an estimated amortized time complexity of O(a(n)), where a - the inverse Ackerman function. This can in practical terms be thought of as roughly equivalent to O(1) or far less than O(log n). Therefore the total time complexity of step 6 is O(m) ~ O(m a(n)) << O(m log n).
